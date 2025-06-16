@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 48px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.hero-overlay p {
+  font-size: 22px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.content-section.right .image {
+  order: 2;
+}
+.content-section.right .text {
+  order: 1;
+}
+.content-section.left .image {
+  order: 1;
+}
+.content-section.left .text {
+  order: 2;
+}
+
+.content-section .image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.content-section .text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.content-section .text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #190434;
+}
+
+.content-section .text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.top-button button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 16px;
+  color: #ffffff;
+  background: linear-gradient(to left, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: 2px solid black;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.top-button button:hover {
+  background-position: left bottom;
+  color: rgb(0, 0, 0);
+}
+
+footer {
+  background-color: #190434;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #ffccff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 32px;
+  }
+
+  .hero-overlay p {
+    font-size: 16px;
+  }
+
+  .content-section .text h2 {
+    font-size: 24px;
+  }
+
+  .content-section .text p {
+    font-size: 16px;
+  }
+
+  .top-button button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
