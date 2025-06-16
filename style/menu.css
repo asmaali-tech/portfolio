@@ -1,0 +1,76 @@
+body {
+  background-color: #190434;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.menu {
+  text-align: center;
+  color: white;
+}
+
+.menu h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+.work {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-link:hover {
+  color: #ddd;
+  border-bottom: 2px solid white;
+  text-decoration: none;
+}
+
+.menu h1 {
+  transition: transform 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .menu h1 {
+    font-size: 2.5rem;
+  }
+
+  .close-btn {
+    font-size: 2rem;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu h1 {
+    font-size: 2rem;
+  }
+}

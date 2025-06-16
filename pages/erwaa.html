@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erwaa Project</title>
+  <link rel="stylesheet" href="../style/erwaa.css" />
+</head>
+<body>
+
+   
+<div class="top-button">
+  <button id="menuBtn">Menu</button>
+</div>
+
+
+ 
+  <section class="hero-section">
+    <img src="../assets/e1.jpg" alt="Erwaa Image" class="hero-image" />
+    <div class="hero-overlay">
+      <h1>Erwaa</h1>
+      <p>Where Every Drop Counts</p>
+    </div>
+  </section>
+
+  
+  <section class="content-section right">
+    <div class="text reveal">
+      <h2>Overview</h2>
+      <p>Irwaa is a smart irrigation project that uses AI to optimize water usage based on real environmental data. It analyzes soil type, plant type, and weather conditions to decide when and how much water each plant needs, ensuring efficient and sustainable irrigation.</p>
+    </div>
+    <div class="image reveal">
+      <img src="../assets/e4.png" alt="Erwaa Feature" />
+    </div>
+  </section>
+
+  
+  <section class="content-section left">
+    <div class="image reveal">
+      <img src="../assets/e3.png" alt="Erwaa Feature 2" />
+    </div>
+    <div class="text reveal">
+      <h2>The Problem</h2>
+      <p>Traditional irrigation systems rely on fixed schedules without considering actual plant needs or changing weather conditions. This leads to water waste and can negatively affect plant health.</p>
+    </div>
+  </section>
+
+  
+  <section class="content-section right">
+    <div class="text reveal">
+      <h2>The Goal</h2>
+      <p>To build an intelligent system that makes automated irrigation decisions using real-time environmental data, while also supporting users with weather forecasts, helpful tips, and preventive warnings.</p>
+      <strong>..and Irwaʼ brings all of these goals together in one smart platform.</strong>
+    </div>
+    <div class="image reveal">
+      <img src="../assets/e2.png" alt="Erwaa Feature 3" />
+    </div>
+  </section>
+
+  
+  <script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  reveals.forEach(reveal => {
+    observer.observe(reveal);
+  });
+</script>
+
+<footer>
+  <p>Designed by Asmaa Ali</p>
+  <p>📧 asmaa.ali.asaad@gmail.com | 💼 <a href="https://www.linkedin.com/in/asmaaali" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+    document.getElementById("menuBtn").onclick = function () {
+      window.location.href = "menu.html";
+    };
+  </script>
+
+</body>
+</html>
